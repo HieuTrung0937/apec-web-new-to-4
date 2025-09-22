@@ -1,28 +1,31 @@
-/* style.css */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-size: 18px;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  font-family:'Times New Roman', Times, serif;
 }
-header {
-  background: #005f99;
-  color: white;
-  text-align: center;
+
+.background {
+  background-image: url("/picture/apec-backround.jpg");
+  height: 100vh;            
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center; 
+}
+
+.content {
+  max-width: 800px;    
+  margin: 10px auto;    
+  background: rgba(255, 255, 255, 0.2); 
   padding: 20px;
+  border-radius: 10px;  
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); 
+  backdrop-filter: blur(8px);
 }
-section {
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
-}
-h2 {
-  color: #005f99;
-}
-footer {
-  background: #eee;
-  text-align: center;
-  padding: 10px;
-  margin-top: 20px;
+.dropcap {
+  font-size: 2.4em; 
+  font-weight: bold;
+  float: left;     
+  line-height: 1; 
+  margin-right: 5px;
 }
