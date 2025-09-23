@@ -1,3 +1,4 @@
+/* ===== BODY & BACKGROUND ===== */
 body {
   font-size: 18px;
   margin: 0;
@@ -9,29 +10,30 @@ body {
   background-image: url("picture/backround-pc.jpg");
   height: 100vh;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
+  background-attachment: fixed;
 }
 
 @media (max-width: 768px) {
   .background {
     background: url("picture/anhbia-750x1333.jpg") no-repeat center center/cover;
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-attachment: scroll; /* tránh lỗi trên mobile */
   }
 }
 
+/* ===== CONTENT ===== */
 .content {
   max-width: 800px;
   margin: 10px auto;
-  background: rgba(255, 255, 255, 0.253);
+  background: rgba(255, 255, 255, 0.25);
   padding: 20px;
-  border-radius: 2px;
+  border-radius: 5px;
   box-shadow: 0 4px 10px #ccc;
   backdrop-filter: blur(8px);
 }
 
+/* ===== DROPCAP ===== */
 .dropcap {
   font-size: 2.4em;
   font-weight: bold;
@@ -40,32 +42,56 @@ body {
   margin-right: 5px;
 }
 
-/* Sửa tên class grid và định dạng */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cột đều nhau */
-  gap: 16px; /* khoảng cách giữa các ô */
-  justify-items: center; /* căn giữa nội dung trong ô */
+@media (max-width: 480px) {
+  .dropcap {
+    font-size: 1.8em;
+    float: none;
+    display: inline;
+  }
 }
 
+/* ===== GRID LÁ CỜ ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===== CARD ===== */
 .card {
   background: #f5f5f5;
-  padding: 10px; /* nhỏ hơn để card gọn */
+  padding: 10px;
   border-radius: 10px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .card img {
   width: 100%;
+  max-width: 120px; /* nhỏ lại trên mobile */
   height: auto;
-  background-color: black;
   object-fit: contain;
-  /* border-radius: 8px;  */
+  display: block;
+  margin: 0 auto;
 }
 
 .card h2 {
   margin: 8px 0 5px;
-  font-size: 1em; /* giảm font để card nhỏ */
+  font-size: 1em;
   color: #0b66a6;
 }
 
@@ -76,15 +102,52 @@ body {
   display: block;
   margin-top: 5px;
 }
+
+/* ===== INTRO ===== */
 .intro {
   font-size: 18px;
   line-height: 1.6;
-  text-align: justify; /* căn đều 2 bên cho đẹp */
+  text-align: justify;
   margin-bottom: 20px;
 }
+
+/* ===== HÌNH VĂN PHÒNG ===== */
 .vanphong {
-  height: auto;
   width: 100%;
+  max-width: 600px;
+  height: auto;
   display: block;
   margin: 20px auto;
+}
+
+/* ===== APPBAR ===== */
+.appbar {
+  background-color: #004080;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+footer h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin: 5px 0;
 }
