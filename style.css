@@ -2,7 +2,7 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 0;
-  font-family:'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .background {
@@ -16,9 +16,9 @@ body {
 @media (max-width: 768px) {
   .background {
     background: url('picture/anhbia-750x1333.jpg') no-repeat center center/cover;
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center; 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; 
   }
 }
 
@@ -31,10 +31,47 @@ body {
   box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); 
   backdrop-filter: blur(8px);
 }
+
 .dropcap {
   font-size: 2.4em; 
   font-weight: bold;
   float: left;     
   line-height: 1; 
   margin-right: 5px;
+}
+
+/* Sửa tên class grid và định dạng */
+.grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 20px; 
+}
+
+.card { 
+  background: rgba(255,255,255,0.9); 
+  padding: 10px; /* nhỏ hơn để card gọn */
+  border-radius: 10px; 
+  text-align: center; 
+}
+
+.card img { 
+  width: 100%; 
+  height: auto; 
+  background-color: black;
+  object-fit: contain; 
+  border-radius: 8px; 
+}
+
+.card h2 { 
+  margin: 8px 0 5px; 
+  font-size: 1em; /* giảm font để card nhỏ */
+  color: #0b66a6; 
+}
+
+.card a { 
+  text-decoration: none; 
+  color: #0b66a6; 
+  font-weight: bold; 
+  display: block; 
+  margin-top: 5px;
 }
