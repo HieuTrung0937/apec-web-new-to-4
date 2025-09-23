@@ -2,76 +2,89 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 0;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .background {
-  background-image: url("picture/backround-pc.jpg"); 
-  height: 100vh;            
+  background-image: url("picture/backround-pc.jpg");
+  height: 100vh;
   background-size: cover;
   background-attachment: fixed;
-  background-position: center; 
+  background-position: center;
 }
 
 @media (max-width: 768px) {
   .background {
-    background: url('picture/anhbia-750x1333.jpg') no-repeat center center/cover;
+    background: url("picture/anhbia-750x1333.jpg") no-repeat center center/cover;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center; 
+    background-position: center;
   }
 }
 
 .content {
-  max-width: 800px;    
-  margin: 10px auto;    
-  background: rgba(255, 255, 255, 0.2); 
+  max-width: 800px;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 0.253);
   padding: 20px;
-  border-radius: 10px;  
-  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3); 
+  border-radius: 2px;
+  box-shadow: 0 4px 10px #ccc;
   backdrop-filter: blur(8px);
 }
 
 .dropcap {
-  font-size: 2.4em; 
+  font-size: 2.4em;
   font-weight: bold;
-  float: left;     
-  line-height: 1; 
+  float: left;
+  line-height: 1;
   margin-right: 5px;
 }
 
 /* Sửa tên class grid và định dạng */
-.grid { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 20px; 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột đều nhau */
+  gap: 16px; /* khoảng cách giữa các ô */
+  justify-items: center; /* căn giữa nội dung trong ô */
 }
 
-.card { 
-  background: rgba(255,255,255,0.9); 
+.card {
+  background: #f5f5f5;
   padding: 10px; /* nhỏ hơn để card gọn */
-  border-radius: 10px; 
-  text-align: center; 
+  border-radius: 10px;
+  text-align: center;
 }
 
-.card img { 
-  width: 100%; 
-  height: auto; 
+.card img {
+  width: 100%;
+  height: auto;
   background-color: black;
-  object-fit: contain; 
-  border-radius: 8px; 
+  object-fit: contain;
+  /* border-radius: 8px;  */
 }
 
-.card h2 { 
-  margin: 8px 0 5px; 
+.card h2 {
+  margin: 8px 0 5px;
   font-size: 1em; /* giảm font để card nhỏ */
-  color: #0b66a6; 
+  color: #0b66a6;
 }
 
-.card a { 
-  text-decoration: none; 
-  color: #0b66a6; 
-  font-weight: bold; 
-  display: block; 
+.card a {
+  text-decoration: none;
+  color: #0b66a6;
+  font-weight: bold;
+  display: block;
   margin-top: 5px;
+}
+.intro {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify; /* căn đều 2 bên cho đẹp */
+  margin-bottom: 20px;
+}
+.vanphong {
+  height: auto;
+  width: 100%;
+  display: block;
+  margin: 20px auto;
 }
