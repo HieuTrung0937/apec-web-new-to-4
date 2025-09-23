@@ -6,7 +6,7 @@ body {
 }
 
 .background {
-  background-image: url("/picture/backround-pc.jpg");
+  background-image: url("/picture/backround-pc.jpg"); 
   height: 100vh;            
   background-size: cover;
   background-attachment: fixed;
