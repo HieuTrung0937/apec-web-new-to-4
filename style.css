@@ -18,7 +18,8 @@ body {
   .background {
     background: url("picture/anhbia-750x1333.jpg") no-repeat center center/cover;
     background-size: cover;
-    background-attachment: scroll; /* tránh lỗi trên mobile */
+    background-attachment: fixed;
+    /* background-attachment: scroll; tránh lỗi trên mobile */
   }
 }
 
@@ -59,15 +60,21 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .grid { grid-template-columns: repeat(3, 1fr); }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 480px) {
-  .grid { grid-template-columns: repeat(2, 1fr); }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ===== CARD ===== */
