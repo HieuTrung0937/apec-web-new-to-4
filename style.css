@@ -1,6 +1,6 @@
 /* ===== BODY & BACKGROUND ===== */
 body {
-  font-size: 20px;
+  font-size: 30px;
   margin: 0;
   padding: 0;
   font-family: "Times New Roman", Times, serif;
@@ -77,7 +77,6 @@ body {
   }
 }
 
-/* ===== CARD ===== */
 .card {
   background: #f5f5f5;
   padding: 10px;
